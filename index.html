@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For You ❤️</title>
+
+<style>
+body{
+font-family: Arial, sans-serif;
+background:#ffe6f0;
+text-align:center;
+padding:100px;
+}
+
+.page{
+display:none;
+}
+
+.active{
+display:block;
+}
+
+button{
+padding:12px 25px;
+font-size:16px;
+background:#ff4d88;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+margin-top:20px;
+}
+
+button:hover{
+background:#e6005c;
+}
+
+p{
+max-width:600px;
+margin:auto;
+font-size:18px;
+line-height:1.6;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="page1" class="page active">
+<h1>I'm Sorry</h1>
+<h2>Can you please forgive me?</h2>
+<button onclick="nextPage(2)">Continue</button>
+</div>
+
+<div id="page2" class="page">
+<h1>Happy Women's Day ❤️</h1>
+<button onclick="nextPage(3)">Continue</button>
+</div>
+
+<div id="page3" class="page">
+<h2>A Message For You</h2>
+<p>
+I just want you to know how much you mean to me. I'm really sorry if I hurt you.
+You are very important to me and I truly appreciate everything about you.
+Your kindness, strength, and the way you make everything better means so much to me.
+On this Women's Day, I just wanted to remind you how special you are to me,
+and I hope you can forgive me because I never want to lose someone as amazing as you.
+</p>
+</div>
+
+<script>
+function nextPage(page){
+document.querySelectorAll(".page").forEach(function(p){
+p.classList.remove("active");
+});
+document.getElementById("page"+page).classList.add("active");
+}
+</script>
+
+</body>
+</html>
